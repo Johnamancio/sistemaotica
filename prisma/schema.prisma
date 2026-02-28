@@ -8,9 +8,9 @@ datasource db {
 }
 
 model Cliente {
-  id        String   @id @default(cuid())
-  nome      String
-  telefone  String
-  cpf       String @unique @db.VarChar(11)
-  createdAt DateTime @default(now())
+  id        String    @id @default(cuid())
+  nome      String    @unique
+  telefone  String    @unique 
+  cpf       String    @unique @db.VarChar(11)
+  createdAt DateTime  @default(now())
 }
