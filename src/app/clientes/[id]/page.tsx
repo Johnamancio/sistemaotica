@@ -1,6 +1,7 @@
 import { prisma } from "@/lib/prisma";
 import { updateCliente } from "@/actions/updateCliente";
 import { notFound } from "next/navigation";
+import CpfInput from "@/components/CpfInput";
 
 interface Props {
   params: Promise<{
@@ -47,6 +48,11 @@ export default async function EditarClientePage({ params }: Props) {
             className="w-full border p-2 rounded"
           />
         </div>
+
+          <div>
+          <label className="block mb-1 font-medium">CPF</label>
+          <CpfInput defaultValue={cliente.cpf} />
+          </div>
 
         <button
           type="submit"

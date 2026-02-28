@@ -11,5 +11,6 @@ model Cliente {
   id        String   @id @default(cuid())
   nome      String
   telefone  String
+  cpf       String @unique @db.VarChar(11)
   createdAt DateTime @default(now())
 }

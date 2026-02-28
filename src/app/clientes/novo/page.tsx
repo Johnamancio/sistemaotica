@@ -1,4 +1,5 @@
 import { createCliente } from "@/actions/createCliente";
+import CpfInput from "@/components/CpfInput";
 
 export default function NovoCliente() {
   return (
@@ -19,6 +20,10 @@ export default function NovoCliente() {
           required
           className="border p-2"
         />
+          <div>
+          <label className="block mb-1 font-medium">CPF</label>
+          <CpfInput/>
+          </div>
 
         <button
           type="submit"

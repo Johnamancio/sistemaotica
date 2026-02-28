@@ -21,6 +21,7 @@ export default async function ClientesPage() {
             <th className="p-2 border text-gray-700">ID</th>
             <th className="p-2 border text-gray-700">Nome</th>
             <th className="p-2 border text-gray-700">Telefone</th>
+            <th className="p-2 border text-gray-700">CPF</th>
             <th className="p-2 border text-gray-700">Ações</th>
           </tr>
         </thead>
@@ -31,10 +32,11 @@ export default async function ClientesPage() {
               <td className="p-2 border">{cliente.id}</td>
               <td className="p-2 border">{cliente.nome}</td>
               <td className="p-2 border">{cliente.telefone}</td>
+              <td className="p-2 border">{cliente.cpf}</td>
 
               <td className="p-2 border align-middle">
                 <div className="flex justify-center gap-2">
-            {/* Botão Editar */}
+                {/* Botão Editar */}
                   <Link
                     href={`/clientes/${cliente.id}`}
                     className="bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-600"
